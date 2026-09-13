@@ -15,16 +15,17 @@
         
         <!-- 1. Riga di comandi e Selettore Lingua -->
         <nav class="d-flex justify-content-between align-items-center border-bottom border-secondary border-opacity-25 pb-3 mb-5">
-            <div class="d-flex align-items-center">
-                <a href="#home" class="text-secondary text-decoration-none me-3"><i class="bi bi-house-door me-1"></i> <span class="lang-en">Home</span><span class="lang-it d-none">Home</span></a>
-                <a href="#asserzioni" class="text-secondary text-decoration-none me-3"><i class="bi bi-journal-text me-1"></i> <span class="lang-en">Core Principles</span><span class="lang-it d-none">Asserzioni</span></a>
-                <a href="#problemi" class="text-secondary text-decoration-none me-3"><i class="bi bi-list-check me-1"></i> <span class="lang-en">Resolved Issues</span><span class="lang-it d-none">Tematiche Risolte</span></a>
-                <a href="#libro" class="text-secondary text-decoration-none me-3"><i class="bi bi-book me-1"></i> <span class="lang-en">The Book</span><span class="lang-it d-none">Il Libro</span></a>
+            <div class="d-flex align-items-center flex-wrap gap-3">
+                <a href="#home" class="text-secondary text-decoration-none"><i class="bi bi-house-door me-1"></i> <span class="lang-en">Home</span><span class="lang-it d-none">Home</span></a>
+                <a href="#asserzioni" class="text-secondary text-decoration-none"><i class="bi bi-journal-text me-1"></i> <span class="lang-en">Core Principles</span><span class="lang-it d-none">Asserzioni</span></a>
+                <a href="#problemi" class="text-secondary text-decoration-none"><i class="bi bi-list-check me-1"></i> <span class="lang-en">Resolved Issues</span><span class="lang-it d-none">Tematiche Risolte</span></a>
+                <a href="#libro" class="text-secondary text-decoration-none"><i class="bi bi-book me-1"></i> <span class="lang-en">The Book</span><span class="lang-it d-none">Il Libro</span></a>
                 <a href="#acquista" class="text-secondary text-decoration-none"><i class="bi bi-cart3 me-1"></i> <span class="lang-en">Buy Now</span><span class="lang-it d-none">Acquista</span></a>
+                <a href="#contatti" class="text-secondary text-decoration-none"><i class="bi bi-envelope me-1"></i> <span class="lang-en">Contact</span><span class="lang-it d-none">Contatti</span></a>
             </div>
             
             <!-- Pulsanti selezione lingua -->
-            <div class="btn-group btn-group-sm" role="group" aria-label="Language selector">
+            <div class="btn-group btn-group-sm ms-2" role="group" aria-label="Language selector">
                 <button type="button" class="btn btn-outline-info active" id="btn-en" onclick="setLanguage('en')">EN</button>
                 <button type="button" class="btn btn-outline-info" id="btn-it" onclick="setLanguage('it')">IT</button>
             </div>
@@ -142,19 +143,42 @@
             </div>
         </section>
 
-        <!-- 5. Copertina del libro -->
+        <!-- 5. Copertine del libro (Edizione Italiana ed Inglese) -->
         <section class="text-center mb-5" id="libro">
-            <h3 class="h6 text-uppercase text-secondary mb-3">
-                <span class="lang-en">Official Book Cover</span>
-                <span class="lang-it d-none">La Copertina Ufficiale</span>
+            <h3 class="h6 text-uppercase text-secondary mb-4">
+                <span class="lang-en">Official Book Covers</span>
+                <span class="lang-it d-none">Le Copertine Ufficiali</span>
             </h3>
-            <div class="d-inline-block p-2 border border-secondary border-opacity-25 rounded bg-black">
-                <img src="copertina.jpg" alt="Time Bubble Universe Cover" class="img-fluid rounded" style="max-height: 420px;">
+            <div class="row justify-content-center g-4">
+                <!-- Copertina Italiana -->
+                <div class="col-md-5 col-lg-4">
+                    <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
+                        <div class="mb-3">
+                            <img src="it_A0_Copertina.png" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded shadow" style="max-height: 380px;">
+                        </div>
+                        <div class="text-info fw-semibold small">
+                            <span class="lang-en">Italian Edition</span>
+                            <span class="lang-it d-none">Edizione Italiana</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copertina Inglese -->
+                <div class="col-md-5 col-lg-4">
+                    <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
+                        <div class="mb-3">
+                            <img src="en_A0_Copertina.png" alt="Time Bubble Universe - English Edition" class="img-fluid rounded shadow" style="max-height: 380px;">
+                        </div>
+                        <div class="text-info fw-semibold small">
+                            <span class="lang-en">English Edition</span>
+                            <span class="lang-it d-none">Edizione Inglese</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 6. Pulsante Pagina Autore e Menu Mercati -->
-        <section class="text-center py-4 mb-4" id="acquista">
+        <section class="text-center py-4 mb-5" id="acquista">
             
             <!-- Pulsante Principale: Ricerca Autore Amazon -->
             <div class="mb-3">
@@ -180,6 +204,54 @@
             <div class="small text-secondary mt-3">
                 <span class="lang-en">Available on Amazon KDP in Paperback & Kindle eBook editions</span>
                 <span class="lang-it d-none">Disponibile su Amazon KDP in formato Cartaceo ed eBook</span>
+            </div>
+        </section>
+
+        <!-- 7. Sezione Contatto Autore -->
+        <section class="row justify-content-center mb-5" id="contatti">
+            <div class="col-lg-8">
+                <div class="p-4 rounded-3 border border-info border-opacity-25 bg-black bg-opacity-50">
+                    <h2 class="h4 text-info fw-bold mb-3 text-center">
+                        <i class="bi bi-envelope-paper me-2"></i>
+                        <span class="lang-en">Contact the Author</span>
+                        <span class="lang-it d-none">Contatta l'Autore</span>
+                    </h2>
+                    <p class="text-secondary small text-center mb-4">
+                        <span class="lang-en">Send a direct message regarding the Time Bubble Universe theory or the book.</span>
+                        <span class="lang-it d-none">Invia un messaggio diretto relativo alla teoria Time Bubble Universe o al libro.</span>
+                    </p>
+
+                    <form action="https://formspree.io/f/XXXXXX" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label small text-info">
+                                <span class="lang-en">Name</span>
+                                <span class="lang-it d-none">Nome</span>
+                            </label>
+                            <input type="text" name="name" id="name" class="form-control bg-dark text-light border-secondary border-opacity-50" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label small text-info">
+                                <span class="lang-en">Email Address</span>
+                                <span class="lang-it d-none">Indirizzo Email</span>
+                            </label>
+                            <input type="email" name="email" id="email" class="form-control bg-dark text-light border-secondary border-opacity-50" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label small text-info">
+                                <span class="lang-en">Message</span>
+                                <span class="lang-it d-none">Messaggio</span>
+                            </label>
+                            <textarea name="message" id="message" rows="4" class="form-control bg-dark text-light border-secondary border-opacity-50" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-outline-info rounded-pill px-5">
+                                <i class="bi bi-send me-1"></i>
+                                <span class="lang-en">Send Message</span>
+                                <span class="lang-it d-none">Invia Messaggio</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
 
@@ -243,6 +315,7 @@
             } else {
                 itElements.forEach(el => el.classList.add('d-none'));
                 enElements.forEach(el => el.classList.remove('d-none'));
+                btnEn.classList.active && btnEn.classList.add('active');
                 btnEn.classList.add('active');
                 btnIt.classList.remove('active');
             }
