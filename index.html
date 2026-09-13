@@ -143,7 +143,7 @@
             </div>
         </section>
 
-        <!-- 5. Copertine del libro (Edizione Italiana ed Inglese) -->
+        <!-- 5. Copertine del libro (Edizione Italiana ed Inglese con Popup Modal) -->
         <section class="text-center mb-5" id="libro">
             <h3 class="h6 text-uppercase text-secondary mb-4">
                 <span class="lang-en">Official Book Covers</span>
@@ -153,29 +153,80 @@
                 <!-- Copertina Italiana -->
                 <div class="col-md-5 col-lg-4">
                     <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
-                        <div class="mb-3">
-                            <img src="it_A0_Copertina.png" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded shadow" style="max-height: 380px;">
+                        <div class="mb-3 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalCoverIt" style="cursor: pointer;">
+                            <img src="copertina_it.jpg" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
                         </div>
-                        <div class="text-info fw-semibold small">
-                            <span class="lang-en">Italian Edition</span>
-                            <span class="lang-it d-none">Edizione Italiana</span>
+                        <div>
+                            <div class="text-info fw-semibold small">
+                                <span class="lang-en">Italian Edition</span>
+                                <span class="lang-it d-none">Edizione Italiana</span>
+                            </div>
+                            <button type="button" class="btn btn-link btn-sm text-secondary text-decoration-none p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalCoverIt">
+                                <i class="bi bi-zoom-in me-1"></i>
+                                <span class="lang-en">Click to enlarge</span>
+                                <span class="lang-it d-none">Clicca per ingrandire</span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <!-- Copertina Inglese -->
                 <div class="col-md-5 col-lg-4">
                     <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
-                        <div class="mb-3">
-                            <img src="en_A0_Copertina.png" alt="Time Bubble Universe - English Edition" class="img-fluid rounded shadow" style="max-height: 380px;">
+                        <div class="mb-3 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalCoverEn" style="cursor: pointer;">
+                            <img src="copertina_en.jpg" alt="Time Bubble Universe - English Edition" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
                         </div>
-                        <div class="text-info fw-semibold small">
-                            <span class="lang-en">English Edition</span>
-                            <span class="lang-it d-none">Edizione Inglese</span>
+                        <div>
+                            <div class="text-info fw-semibold small">
+                                <span class="lang-en">English Edition</span>
+                                <span class="lang-it d-none">Edizione Inglese</span>
+                            </div>
+                            <button type="button" class="btn btn-link btn-sm text-secondary text-decoration-none p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalCoverEn">
+                                <i class="bi bi-zoom-in me-1"></i>
+                                <span class="lang-en">Click to enlarge</span>
+                                <span class="lang-it d-none">Clicca per ingrandire</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Modali Popup per Ingrandimento Copertine -->
+        <!-- Modal Italiana -->
+        <div class="modal fade" id="modalCoverIt" tabindex="-1" aria-labelledby="modalCoverItLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark text-light border border-secondary">
+                    <div class="modal-header border-secondary border-opacity-25">
+                        <h5 class="modal-title fs-6 text-info" id="modalCoverItLabel">
+                            <span class="lang-en">Italian Edition Cover</span>
+                            <span class="lang-it d-none">Copertina Edizione Italiana</span>
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-2">
+                        <img src="copertina_it.jpg" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Inglese -->
+        <div class="modal fade" id="modalCoverEn" tabindex="-1" aria-labelledby="modalCoverEnLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark text-light border border-secondary">
+                    <div class="modal-header border-secondary border-opacity-25">
+                        <h5 class="modal-title fs-6 text-info" id="modalCoverEnLabel">
+                            <span class="lang-en">English Edition Cover</span>
+                            <span class="lang-it d-none">Copertina Edizione Inglese</span>
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-2">
+                        <img src="copertina_en.jpg" alt="Time Bubble Universe - English Edition" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 6. Pulsante Pagina Autore e Menu Mercati -->
         <section class="text-center py-4 mb-5" id="acquista">
@@ -315,7 +366,6 @@
             } else {
                 itElements.forEach(el => el.classList.add('d-none'));
                 enElements.forEach(el => el.classList.remove('d-none'));
-                btnEn.classList.active && btnEn.classList.add('active');
                 btnEn.classList.add('active');
                 btnIt.classList.remove('active');
             }
