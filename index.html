@@ -9,16 +9,29 @@
     <!-- Bootstrap Icons CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
-        /* Stile per lo zoom interattivo nelle modali */
+        /* Contenitore modale flessibile con scorrimento */
+        .zoom-container {
+            overflow: auto !important;
+            max-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1rem;
+        }
+
         .zoomable-img {
             max-width: 100%;
             height: auto;
             cursor: zoom-in;
-            transition: transform 0.2s ease, max-width 0.2s ease;
+            transition: all 0.2s ease-in-out;
+            flex-shrink: 0;
         }
+
+        /* Stato ingrandito: visualizzazione a risoluzione nativa */
         .zoomable-img.zoomed {
             max-width: none !important;
             width: auto !important;
+            height: auto !important;
             cursor: zoom-out;
         }
     </style>
@@ -230,11 +243,11 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">Edizione Italiana - Fronte</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per lo zoom 1:1)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per caricare la versione ingrandita)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 80vh;">
-                        <img src="it_amazon_cover_tbu_front.jpg" alt="Edizione Italiana Fronte" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
+                    <div class="modal-body zoom-container">
+                        <img src="it_amazon_cover_tbu_front.jpg" data-src-standard="it_amazon_cover_tbu_front.jpg" data-src-hd="it_amazon_cover_tbu_front_1000.jpg" alt="Edizione Italiana Fronte" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
                     </div>
                 </div>
             </div>
@@ -246,11 +259,11 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">Edizione Italiana - Retro</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per lo zoom 1:1)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per caricare la versione ingrandita)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 80vh;">
-                        <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
+                    <div class="modal-body zoom-container">
+                        <img src="it_amazon_cover_tbu_back.jpg" data-src-standard="it_amazon_cover_tbu_back.jpg" data-src-hd="it_amazon_cover_tbu_back_1000.jpg" alt="Edizione Italiana Retro" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
                     </div>
                 </div>
             </div>
@@ -262,11 +275,11 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">English Edition - Front</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image for 1:1 zoom)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image to load enlarged version)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 80vh;">
-                        <img src="en_amazon_cover_tbu_front.jpg" alt="English Edition Front" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
+                    <div class="modal-body zoom-container">
+                        <img src="en_amazon_cover_tbu_front.jpg" data-src-standard="en_amazon_cover_tbu_front.jpg" data-src-hd="en_amazon_cover_tbu_front_1000.jpg" alt="English Edition Front" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
                     </div>
                 </div>
             </div>
@@ -278,11 +291,11 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">English Edition - Back</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image for 1:1 zoom)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image to load enlarged version)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 80vh;">
-                        <img src="en_amazon_cover_tbu_back.jpg" alt="English Edition Back" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
+                    <div class="modal-body zoom-container">
+                        <img src="en_amazon_cover_tbu_back.jpg" data-src-standard="en_amazon_cover_tbu_back.jpg" data-src-hd="en_amazon_cover_tbu_back_1000.jpg" alt="English Edition Back" class="zoomable-img rounded shadow-lg" onclick="toggleZoom(this)">
                     </div>
                 </div>
             </div>
@@ -409,7 +422,15 @@
         ];
 
         function toggleZoom(imgElement) {
-            imgElement.classList.toggle('zoomed');
+            const isZoomed = imgElement.classList.toggle('zoomed');
+            const srcStandard = imgElement.getAttribute('data-src-standard');
+            const srcHd = imgElement.getAttribute('data-src-hd');
+
+            if (isZoomed && srcHd) {
+                imgElement.src = srcHd;
+            } else if (srcStandard) {
+                imgElement.src = srcStandard;
+            }
         }
 
         function populateAmazonMarkets(asin) {
@@ -448,13 +469,17 @@
         document.addEventListener('DOMContentLoaded', () => {
             populateAmazonMarkets(bookASIN);
 
-            // Resetta lo stato dello zoom quando la modale viene chiusa
+            // Resetta lo stato dello zoom e ripristina l'immagine originale alla chiusura della modale
             const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {
                 modal.addEventListener('hidden.bs.modal', () => {
-                    const zoomedImg = modal.querySelector('.zoomable-img.zoomed');
+                    const zoomedImg = modal.querySelector('.zoomable-img');
                     if (zoomedImg) {
                         zoomedImg.classList.remove('zoomed');
+                        const srcStandard = zoomedImg.getAttribute('data-src-standard');
+                        if (srcStandard) {
+                            zoomedImg.src = srcStandard;
+                        }
                     }
                 });
             });
