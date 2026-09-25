@@ -159,13 +159,21 @@
                             <span class="lang-it d-none">Edizione Italiana (Fronte e Retro)</span>
                         </div>
                         <div class="row g-2 justify-content-center">
-                            <div class="col-6">
-                                <img src="it_amazon_cover_tbu_front.jpg" alt="Edizione Italiana Fronte" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalItFront">
-                                <div class="small text-secondary mt-1">Fronte</div>
+                            <div class="col-6 text-center">
+                                <img src="it_amazon_cover_tbu_front.jpg" alt="Edizione Italiana Fronte" class="img-fluid rounded shadow" style="max-height: 280px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalItFront">
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-outline-info rounded-pill px-3 py-1" data-bs-toggle="modal" data-bs-target="#modalItFront">
+                                        <i class="bi bi-zoom-in me-1"></i> <span class="lang-en">Enlarge Front</span><span class="lang-it d-none">Ingrandisci Fronte</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalItBack">
-                                <div class="small text-secondary mt-1">Retro</div>
+                            <div class="col-6 text-center">
+                                <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="img-fluid rounded shadow" style="max-height: 280px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalItBack">
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-outline-info rounded-pill px-3 py-1" data-bs-toggle="modal" data-bs-target="#modalItBack">
+                                        <i class="bi bi-zoom-in me-1"></i> <span class="lang-en">Enlarge Back</span><span class="lang-it d-none">Ingrandisci Retro</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -179,13 +187,21 @@
                             <span class="lang-it d-none">Edizione Inglese (Front & Back)</span>
                         </div>
                         <div class="row g-2 justify-content-center">
-                            <div class="col-6">
-                                <img src="en_amazon_cover_tbu_front.jpg" alt="English Edition Front" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalEnFront">
-                                <div class="small text-secondary mt-1">Front</div>
+                            <div class="col-6 text-center">
+                                <img src="en_amazon_cover_tbu_front.jpg" alt="English Edition Front" class="img-fluid rounded shadow" style="max-height: 280px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalEnFront">
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-outline-info rounded-pill px-3 py-1" data-bs-toggle="modal" data-bs-target="#modalEnFront">
+                                        <i class="bi bi-zoom-in me-1"></i> <span class="lang-en">Enlarge Front</span><span class="lang-it d-none">Ingrandisci Fronte</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <img src="en_amazon_cover_tbu_back.jpg" alt="English Edition Back" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalEnBack">
-                                <div class="small text-secondary mt-1">Back</div>
+                            <div class="col-6 text-center">
+                                <img src="en_amazon_cover_tbu_back.jpg" alt="English Edition Back" class="img-fluid rounded shadow" style="max-height: 280px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalEnBack">
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-outline-info rounded-pill px-3 py-1" data-bs-toggle="modal" data-bs-target="#modalEnBack">
+                                        <i class="bi bi-zoom-in me-1"></i> <span class="lang-en">Enlarge Back</span><span class="lang-it d-none">Ingrandisci Retro</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,17 +209,17 @@
             </div>
         </section>
 
-        <!-- Modali Popup per Ingrandimento Copertine -->
+        <!-- Modali Popup per Ingrandimento Copertine ad Alta Risoluzione -->
         <!-- Modale IT Fronte -->
         <div class="modal fade" id="modalItFront" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content bg-dark text-light border border-secondary">
-                    <div class="modal-header border-secondary border-opacity-25">
+                    <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">Edizione Italiana - Fronte</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-2">
-                        <img src="it_amazon_cover_tbu_front.jpg" alt="Edizione Italiana Fronte" class="img-fluid rounded">
+                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 85vh;">
+                        <img src="it_amazon_cover_tbu_front.jpg" alt="Edizione Italiana Fronte" class="rounded shadow-lg" style="max-width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
@@ -211,14 +227,14 @@
 
         <!-- Modale IT Retro -->
         <div class="modal fade" id="modalItBack" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content bg-dark text-light border border-secondary">
-                    <div class="modal-header border-secondary border-opacity-25">
+                    <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">Edizione Italiana - Retro</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-2">
-                        <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="img-fluid rounded">
+                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 85vh;">
+                        <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="rounded shadow-lg" style="max-width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
@@ -226,14 +242,14 @@
 
         <!-- Modale EN Fronte -->
         <div class="modal fade" id="modalEnFront" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content bg-dark text-light border border-secondary">
-                    <div class="modal-header border-secondary border-opacity-25">
+                    <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">English Edition - Front</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-2">
-                        <img src="en_amazon_cover_tbu_front.jpg" alt="English Edition Front" class="img-fluid rounded">
+                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 85vh;">
+                        <img src="en_amazon_cover_tbu_front.jpg" alt="English Edition Front" class="rounded shadow-lg" style="max-width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
@@ -241,14 +257,14 @@
 
         <!-- Modale EN Retro -->
         <div class="modal fade" id="modalEnBack" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content bg-dark text-light border border-secondary">
-                    <div class="modal-header border-secondary border-opacity-25">
+                    <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">English Edition - Back</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center p-2">
-                        <img src="en_amazon_cover_tbu_back.jpg" alt="English Edition Back" class="img-fluid rounded">
+                    <div class="modal-body text-center p-3 overflow-auto" style="max-height: 85vh;">
+                        <img src="en_amazon_cover_tbu_back.jpg" alt="English Edition Back" class="rounded shadow-lg" style="max-width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
