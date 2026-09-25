@@ -154,7 +154,7 @@
                 <div class="col-md-5 col-lg-4">
                     <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
                         <div class="mb-3 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalCoverIt" style="cursor: pointer;">
-                            <img src="copertina_it.jpg" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
+                            <img src="it_A0_Copertina.png" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
                         </div>
                         <div>
                             <div class="text-info fw-semibold small">
@@ -173,7 +173,7 @@
                 <div class="col-md-5 col-lg-4">
                     <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
                         <div class="mb-3 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalCoverEn" style="cursor: pointer;">
-                            <img src="copertina_en.jpg" alt="Time Bubble Universe - English Edition" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
+                            <img src="en_A0_Copertina.png" alt="Time Bubble Universe - English Edition" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
                         </div>
                         <div>
                             <div class="text-info fw-semibold small">
@@ -308,9 +308,12 @@
 
     </div>
 
+    <!-- Bootstrap 5 JS Bundle CDN (incluso prima degli script custom) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Script Gestione Lingua e Generazione Mercati Amazon -->
     <script>
-        const bookASIN = "B0HJF8Y887"; // Inserire l'ASIN quando disponibile
+        const bookASIN = "B0HJF8Y887";
 
         const amazonMarkets = [
             { name: "🇮🇹 Italia (.it)", domain: "it" },
@@ -375,7 +378,5 @@
             populateAmazonMarkets(bookASIN);
         });
     </script>
-    <!-- Bootstrap 5 JS Bundle CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
