@@ -143,48 +143,50 @@
             </div>
         </section>
 
-        <!-- 5. Copertine del libro (Edizione Italiana ed Inglese con Popup Modal) -->
+        <!-- 5. Copertine del libro (Edizione Italiana ed Inglese: Fronte e Retro) -->
         <section class="text-center mb-5" id="libro">
             <h3 class="h6 text-uppercase text-secondary mb-4">
-                <span class="lang-en">Official Book Covers</span>
-                <span class="lang-it d-none">Le Copertine Ufficiali</span>
+                <span class="lang-en">Official Book Covers (v1.1)</span>
+                <span class="lang-it d-none">Le Copertine Ufficiali (v1.1)</span>
             </h3>
+            
             <div class="row justify-content-center g-4">
-                <!-- Copertina Italiana -->
-                <div class="col-md-5 col-lg-4">
-                    <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
-                        <div class="mb-3 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalCoverIt" style="cursor: pointer;">
-                            <img src="it_A0_Copertina.png" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
+                <!-- Edizione Italiana -->
+                <div class="col-lg-6">
+                    <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100">
+                        <div class="text-info fw-semibold small mb-3">
+                            <span class="lang-en">Italian Edition (Front & Back)</span>
+                            <span class="lang-it d-none">Edizione Italiana (Fronte e Retro)</span>
                         </div>
-                        <div>
-                            <div class="text-info fw-semibold small">
-                                <span class="lang-en">Italian Edition</span>
-                                <span class="lang-it d-none">Edizione Italiana</span>
+                        <div class="row g-2 justify-content-center">
+                            <div class="col-6">
+                                <img src="it_amazon_cover_tbu_front.jpg" alt="Edizione Italiana Fronte" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalItFront">
+                                <div class="small text-secondary mt-1">Fronte</div>
                             </div>
-                            <button type="button" class="btn btn-link btn-sm text-secondary text-decoration-none p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalCoverIt">
-                                <i class="bi bi-zoom-in me-1"></i>
-                                <span class="lang-en">Click to enlarge</span>
-                                <span class="lang-it d-none">Clicca per ingrandire</span>
-                            </button>
+                            <div class="col-6">
+                                <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalItBack">
+                                <div class="small text-secondary mt-1">Retro</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Copertina Inglese -->
-                <div class="col-md-5 col-lg-4">
-                    <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100 d-flex flex-column justify-content-between">
-                        <div class="mb-3 cursor-pointer" data-bs-toggle="modal" data-bs-target="#modalCoverEn" style="cursor: pointer;">
-                            <img src="en_A0_Copertina.png" alt="Time Bubble Universe - English Edition" class="img-fluid rounded shadow hover-zoom" style="max-height: 380px;">
+
+                <!-- Edizione Inglese -->
+                <div class="col-lg-6">
+                    <div class="p-3 border border-secondary border-opacity-25 rounded bg-black h-100">
+                        <div class="text-info fw-semibold small mb-3">
+                            <span class="lang-en">English Edition (Front & Back)</span>
+                            <span class="lang-it d-none">Edizione Inglese (Front & Back)</span>
                         </div>
-                        <div>
-                            <div class="text-info fw-semibold small">
-                                <span class="lang-en">English Edition</span>
-                                <span class="lang-it d-none">Edizione Inglese</span>
+                        <div class="row g-2 justify-content-center">
+                            <div class="col-6">
+                                <img src="en_amazon_cover_tbu_front.jpg" alt="English Edition Front" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalEnFront">
+                                <div class="small text-secondary mt-1">Front</div>
                             </div>
-                            <button type="button" class="btn btn-link btn-sm text-secondary text-decoration-none p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalCoverEn">
-                                <i class="bi bi-zoom-in me-1"></i>
-                                <span class="lang-en">Click to enlarge</span>
-                                <span class="lang-it d-none">Clicca per ingrandire</span>
-                            </button>
+                            <div class="col-6">
+                                <img src="en_amazon_cover_tbu_back.jpg" alt="English Edition Back" class="img-fluid rounded shadow" style="max-height: 320px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalEnBack">
+                                <div class="small text-secondary mt-1">Back</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -192,37 +194,61 @@
         </section>
 
         <!-- Modali Popup per Ingrandimento Copertine -->
-        <!-- Modal Italiana -->
-        <div class="modal fade" id="modalCoverIt" tabindex="-1" aria-labelledby="modalCoverItLabel" aria-hidden="true">
+        <!-- Modale IT Fronte -->
+        <div class="modal fade" id="modalItFront" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25">
-                        <h5 class="modal-title fs-6 text-info" id="modalCoverItLabel">
-                            <span class="lang-en">Italian Edition Cover</span>
-                            <span class="lang-it d-none">Copertina Edizione Italiana</span>
-                        </h5>
+                        <h5 class="modal-title fs-6 text-info">Edizione Italiana - Fronte</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center p-2">
-                        <img src="it_A0_Copertina.png" alt="Time Bubble Universe - Edizione Italiana" class="img-fluid rounded">
+                        <img src="it_amazon_cover_tbu_front.jpg" alt="Edizione Italiana Fronte" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal Inglese -->
-        <div class="modal fade" id="modalCoverEn" tabindex="-1" aria-labelledby="modalCoverEnLabel" aria-hidden="true">
+        <!-- Modale IT Retro -->
+        <div class="modal fade" id="modalItBack" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25">
-                        <h5 class="modal-title fs-6 text-info" id="modalCoverEnLabel">
-                            <span class="lang-en">English Edition Cover</span>
-                            <span class="lang-it d-none">Copertina Edizione Inglese</span>
-                        </h5>
+                        <h5 class="modal-title fs-6 text-info">Edizione Italiana - Retro</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center p-2">
-                        <img src="en_A0_Copertina.png" alt="Time Bubble Universe - English Edition" class="img-fluid rounded">
+                        <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modale EN Fronte -->
+        <div class="modal fade" id="modalEnFront" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark text-light border border-secondary">
+                    <div class="modal-header border-secondary border-opacity-25">
+                        <h5 class="modal-title fs-6 text-info">English Edition - Front</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-2">
+                        <img src="en_amazon_cover_tbu_front.jpg" alt="English Edition Front" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modale EN Retro -->
+        <div class="modal fade" id="modalEnBack" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark text-light border border-secondary">
+                    <div class="modal-header border-secondary border-opacity-25">
+                        <h5 class="modal-title fs-6 text-info">English Edition - Back</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-2">
+                        <img src="en_amazon_cover_tbu_back.jpg" alt="English Edition Back" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
