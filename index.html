@@ -151,7 +151,7 @@
                     <ol class="mb-0 lang-it d-none ps-3">
                         <li class="mb-2">Cos'è la materia oscura</li>
                         <li class="mb-2">Cos'è l'energia oscura</li>
-                        <li class="mb-2">Cos'è realmente la gravità</li>
+                        <li class="mb-2">Cos'è réellement la gravità</li>
                         <li class="mb-2">Perché parliamo di velocità della luce</li>
                         <li class="mb-2">Come nascono fenomeni che mostrano una velocità superiore a quella della luce</li>
                         <li class="mb-2">Qual è la vera forma dell'universo</li>
@@ -198,7 +198,7 @@
                                 <img src="it_amazon_cover_tbu_back.jpg" alt="Edizione Italiana Retro" class="img-fluid rounded shadow" style="max-height: 280px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalItBack">
                                 <div class="mt-2">
                                     <button class="btn btn-sm btn-outline-info rounded-pill px-3 py-1" data-bs-toggle="modal" data-bs-target="#modalItBack">
-                                        <i class="bi bi-zoom-in me-1"></i> <span class="lang-en">Enlarge Back</span><span class="lang-it d-none">Ingrandisci Retro</span>
+                                        <i class="bi bi-zoom-in me-1"></i> <span class="lang-en">Enlarge Retro</span><span class="lang-it d-none">Ingrandisci Retro</span>
                                     </button>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">Edizione Italiana - Fronte</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per caricare la versione ingrandita)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per la versione HD)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body zoom-container">
@@ -259,7 +259,7 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">Edizione Italiana - Retro</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per caricare la versione ingrandita)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Clicca sull'immagine per la versione HD)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body zoom-container">
@@ -275,7 +275,7 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">English Edition - Front</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image to load enlarged version)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image for HD version)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body zoom-container">
@@ -291,7 +291,7 @@
                 <div class="modal-content bg-dark text-light border border-secondary">
                     <div class="modal-header border-secondary border-opacity-25 py-2">
                         <h5 class="modal-title fs-6 text-info">English Edition - Back</h5>
-                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image to load enlarged version)</span>
+                        <span class="text-secondary small ms-auto me-3 d-none d-md-inline">(Click image for HD version)</span>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body zoom-container">
@@ -422,14 +422,20 @@
         ];
 
         function toggleZoom(imgElement) {
-            const isZoomed = imgElement.classList.toggle('zoomed');
+            const isZoomed = imgElement.classList.contains('zoomed');
             const srcStandard = imgElement.getAttribute('data-src-standard');
             const srcHd = imgElement.getAttribute('data-src-hd');
 
-            if (isZoomed && srcHd) {
-                imgElement.src = srcHd;
-            } else if (srcStandard) {
-                imgElement.src = srcStandard;
+            if (!isZoomed) {
+                imgElement.classList.add('zoomed');
+                if (srcHd) {
+                    imgElement.setAttribute('src', srcHd);
+                }
+            } else {
+                imgElement.classList.remove('zoomed');
+                if (srcStandard) {
+                    imgElement.setAttribute('src', srcStandard);
+                }
             }
         }
 
@@ -478,7 +484,7 @@
                         zoomedImg.classList.remove('zoomed');
                         const srcStandard = zoomedImg.getAttribute('data-src-standard');
                         if (srcStandard) {
-                            zoomedImg.src = srcStandard;
+                            zoomedImg.setAttribute('src', srcStandard);
                         }
                     }
                 });
