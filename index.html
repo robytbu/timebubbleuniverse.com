@@ -552,3 +552,17 @@
     </script>
 </body>
 </html>
+<script>
+    (function() {
+        const formData = new FormData();
+        formData.append('page', window.location.pathname.split('/').pop() || 'index.html');
+        formData.append('query', window.location.search);
+        formData.append('ua', navigator.userAgent);
+
+        fetch('https://www.grm-projects.com/tbu/tbu_remote_logger.php', {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+        }).catch(err => console.error('Log error:', err));
+    })();
+</script>
